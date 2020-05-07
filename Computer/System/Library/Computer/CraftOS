@@ -1,4 +1,4 @@
-
+local prog = 0
 function PrintCentered(text)
     local w, h = term.getSize()
     x = math.max(math.ceil((w / 2) - (#text / 2)), 0)
@@ -11,8 +11,15 @@ term.setBackgroundColor(colors.lightBlue)
 term.setTextColor(colors.white)
 term.clear()
 
-PrintCentered("Restoring CraftOS...")
-sleep(1)
+PrintCentered("Now restoring CraftOS")
+sleep(0.01)
+repeat
+    prog = prog + 1
+    PrintCentered( "Restoring... " .. prog .. "%" )
+    sleep(0.001)
+until prog > 99
+PrintCentered( " Rebooting..." )
+sleep(0.1)
 OSSettings['boot_arg'] = "craftos"
 OSTableIO.save(OSSettings, "Settings")
 os.reboot()

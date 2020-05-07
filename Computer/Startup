@@ -5,6 +5,16 @@ sides = {
 "right",
 "top",
 "bottom"
+"monitor_0"
+"monitor_1"
+"monitor_2"
+"monitor_3"
+"monitor_4"
+"monitor_5"
+"monitor_6"
+"monitor_7"
+"monitor_8"
+"monitor_9"
 }
 
 function recieveStartupKey(delay)
@@ -149,15 +159,14 @@ if useMonitor then
 --find a monitor if there is one and use it
 verbosePrint("Searching for monitors...")
 for _,side in pairs(sides) do
-	if peripheral.isPresent(side) and peripheral.getType(side) == "monitor" then
-		verbosePrint("Using monitor on "..side.." side.")
+        if peripheral.isPresent(side) and peripheral.getType(side) == "monitor" then
+		verbosePrint("Selecting monitor on "..side.." side.")
 		displayMovedMessage()
 		term.redirect(peripheral.wrap(side))
 		usingMonitor = true
 	else
 	end
 end
-
 end
 
 if not usingMonitor then

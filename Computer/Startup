@@ -72,6 +72,9 @@ function displaySystemNoSupport()
 	term.clear()
 	term.setCursorPos(1,1)
 	print(os.version())
+        print( "To run PearOS, please upgrade your PC." )
+        print( " -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ")
+        shell.run( "motd" )
 end
 
 function displayMovedMessage()

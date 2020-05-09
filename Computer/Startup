@@ -5,18 +5,8 @@ sides = {
 "right",
 "top",
 "bottom"
-"monitor_0"
-"monitor_1"
-"monitor_2"
-"monitor_3"
-"monitor_4"
-"monitor_5"
-"monitor_6"
-"monitor_7"
-"monitor_8"
-"monitor_9"
 }
-
+function init()
 function recieveStartupKey(delay)
 	os.startTimer(delay)
 	while true do
@@ -236,6 +226,8 @@ if verbose then
     PrintCentered(text,screensizey/2+6)
     init()
 else
+end
+init()
 --Crash/Error Handling
 
 

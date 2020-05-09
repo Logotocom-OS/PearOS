@@ -1,0 +1,5 @@
+local user = "Logotocom-OS"
+
+
+wget("http://www.pastebin.com/raw/w5zkvysi",".gitget")
+shell.run(".gitget "..user.." axiom "..branch.." PearOS")

@@ -1,5 +1,9 @@
 local user = "Logotocom-OS"
+loval branch = "master"
+
+
+print( "Installing PearOS" )
 
 
 wget("http://www.pastebin.com/raw/w5zkvysi",".gitget")
-shell.run(".gitget "..user.." axiom "..branch.." PearOS")
+shell.run(".gitget "..user.." PearOS "..branch.." /")
